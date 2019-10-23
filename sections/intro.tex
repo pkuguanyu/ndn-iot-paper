@@ -1,0 +1,39 @@
+\section{Introduction}
+\textbf{In home IoT system, end users' power is significant.}
+
+\textbf{However, in current IoT systems, end users have nearly no power to control how an IoT system works.} 
+As a result, they are suffering high security and privacy risk.
+\begin{itemize}
+	\item Cloud controls trust anchor, end users have no choices except following the cloud's rule of trust. 
+	\item Everything goes to the cloud: privacy issue and security issue.
+	\item Security relies on the IoT application developers.
+\end{itemize}
+
+\textbf{Who killed end users‘ power: }
+\begin{itemize}
+	\item APP developers (system design aspect): In current IoT systems, all security and privacy settings are designed by IoT application developers. End users do not design apps, so the only thing they can do is just following the rules and using it.
+	\item Remote cloud (system running aspect): at present, all IoT system depends on a remote cloud to provide their functions. So all the user's data will be uploaded to the cloud. And the cloud can do anything it wants with the data. End users can do nothing to prevent it.
+\end{itemize}
+
+\textbf{Motivation:} We want to return the power of control back to end users.
+
+First we need to admit that it is impossible to enable end users to control the application layer. Because end users themselves do not develop apps. It is impossible to force all the app developers or cloud service providers to following some certain rules about security and privacy.
+
+However, it is possible to enable end users to control the network layer. Because all applications need to work above the network layer. If we built the security and privacy into a localized network system, and keep the local network user-controlled, end users will have the capability to control their own privacy and security issues, regardless how the applications are designed.
+
+\textbf{Our approach:}
+So in this paper we build a localized network system with built-in security and privacy, to empower end users in IoT systems.
+
+(since NDN is a network protocol for both distributed and secured network. We believe that building such a system based on NDN is the most convenient and efficient way. So we choose NDN. But in this paper we do not claim the same function can not be built on other network layer protocols)
+
+\textbf{Challenge:} How to provide useable security?
+\begin{itemize}
+	\item At present there is no a set of complete and localized security and privacy support in the network layer.
+	\item How to make app developers easier to build apps above this new network protocol?
+\end{itemize}
+
+\textbf{Solutions:}
+\begin{itemize}
+	\item We build a set of localized modules with a localized controller over NDN to handle all the security and privacy issues.
+	\item We facilitate application development by designing security in: enforced security verification/reasoning that are below the application logic, so developers can focus on app functions.
+\end{itemize}

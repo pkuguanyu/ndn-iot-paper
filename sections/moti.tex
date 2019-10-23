@@ -1,0 +1,39 @@
+\section{Motivation}
+\subsection{Security and privacy issues of current IoT systems}
+
+Home IoT is comming into age. There are already around 400 million IoT devices at the end of 2016 and that number is projected to reach 1.5 billion in 2022. Most major network enterprises provide their own IoT services~\cite{?}.
+
+However, the the current IoT systems, the power of end users is very weak as they are just using the system. An IoT system consists of sensors/devices which can generate data from the environment (such as temperature, humidity, door-lock, camera). Then these devices connect to the cloud through some kind of connectivity~\cite{?}. Once the data gets to the cloud, software processes it and then might decide to perform an action, such as sending an alert or automatically adjusting the sensors/devices without the need for the user.
+
+But in the meanwhile, with these convenient and efficient services, end users lose their privacy and security in IoT systems. 
+
+First,  all rules of trust are controlled by the remote cloud. End users can not decide which device is permitted to access which part of data. This leads to many security problems. For example, [TODO]
+
+Second, all data the device generate is uploaded to cloud. This leads to at least two drawback: (1) End users' data is exposed to the remote cloud. It opens up an opportunity of data leakage. And there are already many examples of user data leakage in recent years. (2) During the round-trip of data upload / download, there is potential risk of third-party attack.
+
+Third, security relies on the IoT application developers. Application developers write their own security support. But making security fully depend on application developers leads to potential security holes. [TODO: examples]
+
+\subsection{Do end users have the capability to control the security and privacy?}
+
+As we have stated that, existing IoT systems have serious privacy and security issues. This is because all application services, trust schema, security support are controlled by the cloud. To solve this problem, first we go back to the very first design choice: do we really need a cloud in home IoT system?
+
+To answer this question, we propose a survey of IoT applications:
+
+[TODO: Present a statistic.]
+
+%Figure: x axis storage overhead, y axis computation overhead. 
+%Dot: Heating, ventilation and air conditioning, Lighting control system, Occupancy-aware control system, Appliance control and integration with the smart grid and a smart meter, Home robots and security, Leak detection, Indoor positioning systems, Home automation for the elderly and disabled, Pet and Baby Care, Air quality control, Smart Kitchen and Connected Cooking.
+
+As we can see, in most cases, home IoT applications do not need a remote cloud. So from the aspect of functionality, it is possible to build a localized IoT system controlled by end users.
+
+However, back to reality, in the current IoT system, it is not possible to force all the app developers to design apps following certain security and privacy rules to empower the end user's control.
+
+So we focus on the network layer. If we build the security and privacy directly in the network layer protocol, and enable end users to control a localized network system, we can ensure the end users' security and privacy, regardless how the applications are designed.
+
+\subsection{Building a local-controlled IoT system over NDN}
+
+Base on the above analysis of IoT applications, we intend to build a local-controlled IoT system to empower end users.
+
+Introduction of NDN. 
+
+We build a localized IoT system based on NDN. (explain NDN is a good choice but it is not necessary)

@@ -1,0 +1,122 @@
+\section{Introduction}
+
+\textbf{Current issues:} In current IoT system, end users are on high security and privacy risk due to their limited power in the whole system.
+\begin{itemize}
+	\item Cloud controls trust anchor, end users have no choices except following the cloud's rule of trust. 
+	\item Everything goes to the cloud: privacy issue and security issue.
+	\item Security relies on the IoT application developers.
+\end{itemize}
+
+\textbf{Takeaway from current issues:} All these problems come from the system-level design: at present all IoT systems are cloud controlled.
+
+\textbf{Observations:} in an IoT system, end users have capability to fully control the security and privacy.
+
+\textbf{Motivation:} We want a localized IoT system with designed-in security \& privacy to empower end users.
+
+\textbf{Our approach:} Build autonomous IoT system over NDN. \\
+(Why NDN: since NDN is a new network protocol for both distributed and secured network.)
+
+\textbf{Challenge:} How to provide useable security based on NDN?
+\begin{itemize}
+	\item Although NDN is designed for security, at present there is no a set of complete and useable NDN-based localized security module.
+	\item Application developers are not security exports. How to make them easier to develop secure localized applications?
+\end{itemize}
+
+\textbf{Solutions:}
+\begin{itemize}
+	\item We build a localized controller over NDN to handle all the security and privacy issues.
+	\item We facilitate application development by designing security in: enforced security verification/reasoning that are below the application logic, so developers can focus on app functions.
+\end{itemize}
+
+\section{Motivation}
+\subsection{Security and privacy issues of current IoT systems}
+
+Home IoT is comming into age. There are already around 400 million IoT devices at the end of 2016 and that number is projected to reach 1.5 billion in 2022. Most major network enterprises provide their own IoT services~\cite{?}.
+
+However, the the current IoT systems, the power of end users is very weak as they are just using the system. An IoT system consists of sensors/devices which can generate data from the environment (such as temperature, humidity, door-lock, camera). Then these devices connect to the cloud through some kind of connectivity~\cite{?}. Once the data gets to the cloud, software processes it and then might decide to perform an action, such as sending an alert or automatically adjusting the sensors/devices without the need for the user.
+
+But in the meanwhile, with these convenient and efficient services, end users lose their privacy and security in IoT systems. 
+
+First,  all rules of trust are controlled by the remote cloud. End users can not decide which device is permitted to access which part of data. This leads to many security problems. For example, [TODO]
+
+Second, all data the device generate is uploaded to cloud. This leads to at least two drawback: (1) End users' data is exposed to the remote cloud. It opens up an opportunity of data leakage. And there are already many examples of user data leakage in recent years. (2) During the round-trip of data upload / download, there is potential risk of third-party attack.
+
+Third, security relies on the IoT application developers. Application developers write their own security support. But making security fully depend on application developers leads to potential security holes. [TODO: examples]
+
+\subsection{Do end users have the capability to control the security?}
+
+As we have stated that, existing IoT systems have serious privacy and security issues. This is because all application services, trust schema, security support are controlled by the cloud. To solve this problem, first we go back to the very first design choice: do we really need a cloud in home IoT system?
+
+To answer this question, we propose a survey of IoT applications:
+
+[TODO: Present a statistic.]
+
+%Figure: x axis storage overhead, y axis computation overhead. 
+%Dot: Heating, ventilation and air conditioning, Lighting control system, Occupancy-aware control system, Appliance control and integration with the smart grid and a smart meter, Home robots and security, Leak detection, Indoor positioning systems, Home automation for the elderly and disabled, Pet and Baby Care, Air quality control, Smart Kitchen and Connected Cooking.
+
+As we can see, in most cases, home IoT applications do not need a remote cloud. So they can work purely locally if there are sufficient network layer support. 
+
+\subsection{Building a local-controlled IoT system over NDN}
+
+Base on the above analysis of IoT applications, we intend to build a local-controlled IoT system to empower end users.
+
+Introduction of NDN.
+
+So we Building a localized IoT system based on NDN.
+
+\section{Overview}
+
+An overview of the framework. [TODO:a figure]
+
+Part 1: A localized security controller:
+\begin{itemize}
+	\item Bootstrapping
+	\item Naming Policy
+	\item Trust management and access control
+	\item secured service discovery
+\end{itemize}
+
+Part 2: Enforced security in application development.
+Programming interface exposure and security processing workflow.
+
+\section{Localized security \& privacy controller:}
+
+\subsection{Bootstrapping}
+Bootstrapping as a black box: what's the goal? identity and trust anchor.
+
+\subsection{Named Policy}
+An element to unify authorization and access policy.
+
+\subsection{Trust Management and Access Control}
+
+\subsection{Secured Service Discovery}
+
+\section{Enforced security in application development}
+
+\subsection{Security Processing Below Application Logic}
+
+workflow explanation:
+\begin{itemize}
+	\item how configuration is passed from the controller to the executors.
+	\item how trust management and access control is enforced automatically.
+\end{itemize}
+
+\subsection{Examples: Doorlock and Camera}
+
+pseudo code examples.
+
+\section{Implementation}
+
+\subsection{Adaptation to Link Layer Protocols and Hardware}
+
+\subsection{Broadcast Based Protocols}
+
+Use of broadcast makes design simple.
+
+\section{Evaluation}
+
+\zhiyi{TODO: what are the metrics?}
+
+\section{Conclusion}
+
+

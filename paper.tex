@@ -1,0 +1,86 @@
+\documentclass[sigconf]{acmart}
+
+\usepackage[english]{babel}
+\usepackage{blindtext}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage[hyphenbreaks]{breakurl}
+\usepackage{url}
+\def\UrlBreaks{\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J
+\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V
+\do\W\do\X\do\Y\do\Z\do\[\do\\\do\]\do\^\do\_\do\`\do\a\do\b
+\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n
+\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z
+\do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]\do\)\do\,
+\do\?\do\'\do+\do\=\do\#}
+
+% Copyright
+\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference info
+\setcopyright{none}
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+\usepackage{xspace}
+
+\settopmatter{printacmref=false, printccs=false, printfolios=true}
+
+% DOI
+\acmDOI{}
+
+% ISBN
+\acmISBN{}
+
+%Conference
+\acmConference[SIGCOMM]{ACM Conf}{2019}{}
+%\acmYear{2018}
+%\copyrightyear{}
+
+%% {} with no args suppresses printing of the price
+\acmPrice{}
+
+\input{macro}
+
+\begin{document}
+\title{NDN-IoT: Empower End Users by Localized Security in Home IoT System}
+
+%\titlenote{Produces the permission block, and copyright information}
+%\subtitle{Extended Abstract}
+
+\author{Paper \# XXX, XXX pages}
+% \author{Firstname Lastname}
+% \authornote{Note}
+% \orcid{1234-5678-9012}
+% \affiliation{%
+%   \institution{Affiliation}
+%   \streetaddress{Address}
+%   \city{City} 
+%   \state{State} 
+%   \postcode{Zipcode}
+% }
+% \email{email@domain.com}
+
+% The default list of authors is too long for headers}
+\renewcommand{\shortauthors}{X.et al.}
+
+\input{sections/abstract}
+
+\maketitle
+
+%\input{sections/skeleton}
+\input{sections/intro}
+\input{sections/moti}
+\input{sections/overview}
+\input{sections/controller}
+\input{sections/appsupport}
+\input{sections/impl}
+\input{sections/conclusion}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{reference}
+
+\end{document}
